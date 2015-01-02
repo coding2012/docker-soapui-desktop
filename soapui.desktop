@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Soap UI
+Comment=SOAP UI
+Exec=/root/soapui/bin/soapui.sh
+Terminal=false
+Icon=browser
+Type=Application
+Path=/root/soapui/
