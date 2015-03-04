@@ -4,6 +4,6 @@ Name=Soap UI
 Comment=SOAP UI
 Exec=/root/soapui/bin/soapui.sh
 Terminal=false
-Icon=browser
+Icon=openjdk-7
 Type=Application
 Path=/root/soapui/

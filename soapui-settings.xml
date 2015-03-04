@@ -28,12 +28,18 @@
     <con:setting id="VersionUpdateSettings@auto-check-version-update">true</con:setting>
     <con:setting id="ProxySettings@autoProxy">true</con:setting>
     <con:setting id="ProxySettings@enableProxy">true</con:setting>
-    <con:setting id="WSISettings@location">/root/Desktop/SoapUI-4.6.4/wsi-test-tools</con:setting>
+    <con:setting id="WSISettings@location">/root/soapui/wsi-test-tools</con:setting>
     <con:setting id="com.eviware.soapui.SoapUI@versionToSkip">5.1.2</con:setting>
-    <con:setting id="GlobalPropertySettings@properties"><![CDATA[<property xmlns="http://eviware.com/soapui/config">
-  <name>ittAddress</name>
-  <value>https://ittqa.stella-apps.com</value>
-</property>]]></con:setting>
+    <con:setting id="GlobalPropertySettings@properties"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <property xmlns="http://eviware.com/soapui/config">
+    <name>ittAddress</name>
+    <value>https://itt</value>
+  </property>
+  <con:property>
+    <con:name>ittPort</con:name>
+    <con:value>9443</con:value>
+  </con:property>
+</xml-fragment>]]></con:setting>
     <con:setting id="GlobalPropertySettings@security_scans_properties"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:property>
     <con:name>~(?s).*(s|S)tack ?(t|T)race.*</con:name>
@@ -218,6 +224,6 @@
     <con:setting id="WSISettings@assertionDescription">false</con:setting>
     <con:setting id="WSISettings@showLog">false</con:setting>
     <con:setting id="WSISettings@outputFolder"/>
-    <con:setting id="GlobalPropertySettings@enableOverride">false</con:setting>
+    <con:setting id="GlobalPropertySettings@enableOverride">true</con:setting>
     <con:setting id="SecuritySettings@shadowProxyPassword"/>
 </con:soapui-settings>

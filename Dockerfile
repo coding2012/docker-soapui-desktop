@@ -6,6 +6,7 @@ RUN apt-get install -y  default-jdk
 RUN apt-get install -y  autocutsel
 RUN apt-get install -y  leafpad
 RUN apt-get install -y  firefox
+RUN apt-get install -y  pgadmin3
 ENV DISPLAY :1
 
 ENV USER root
@@ -24,6 +25,12 @@ RUN mv SoapUI-4.6.4 soapui
 # Define default command.
 COPY soapui-settings.xml /root/soapui/soapui-settings.xml
 COPY soapui.desktop /root/Desktop/soapui.desktop
-CMD (USER=root vncserver :1 -geometry 1280x800 -depth 24) && autocutsel -fork \
- && sh /root/soapui/bin/soapui.sh \
- && bash
+COPY pgadmin.desktop /root/Desktop/pgadmin.desktop
+COPY chrome.desktop /root/Desktop/chrome.desktop
+COPY pgadmin3.config /root/.pgadmin3
+COPY pgpass.config /root/.pgpass
+COPY workspace.xml /root/TestPBE-workspace.xml
+RUN chmod 0400 /root/.pgpass
+CMD (USER=root vncserver :1 -geometry 1280x800 -depth 24); \
+ (sleep 8; autocutsel -fork; /root/soapui/bin/soapui.sh); \
+ tail -f /dev/null
