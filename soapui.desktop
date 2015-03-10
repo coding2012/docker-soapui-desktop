@@ -2,8 +2,8 @@
 Version=1.0
 Name=Soap UI
 Comment=SOAP UI
-Exec=/root/soapui/bin/soapui.sh
+Exec=/home/qa/soapui/bin/soapui.sh
 Terminal=false
 Icon=openjdk-7
 Type=Application
-Path=/root/soapui/
+Path=/home/qa/soapui/

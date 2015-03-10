@@ -28,7 +28,7 @@
     <con:setting id="VersionUpdateSettings@auto-check-version-update">true</con:setting>
     <con:setting id="ProxySettings@autoProxy">true</con:setting>
     <con:setting id="ProxySettings@enableProxy">true</con:setting>
-    <con:setting id="WSISettings@location">/root/soapui/wsi-test-tools</con:setting>
+    <con:setting id="WSISettings@location">/home/qa/soapui/wsi-test-tools</con:setting>
     <con:setting id="com.eviware.soapui.SoapUI@versionToSkip">5.1.2</con:setting>
     <con:setting id="GlobalPropertySettings@properties"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <property xmlns="http://eviware.com/soapui/config">

@@ -6,4 +6,4 @@ Exec=google-chrome --no-sandbox --user-data-dir https://itt:9443/itt/
 Terminal=false
 Icon=browser
 Type=Application
-Path=/root/Desktop
+Path=/home/qa/Desktop
